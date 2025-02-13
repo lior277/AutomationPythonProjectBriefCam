@@ -29,9 +29,9 @@ class TestVerifyCharacterLocation(TestSuitBase):  # Inherit from TestSuitBase (o
         google_search_image_page = google_home_page.click_on_images_link()
 
         google_search_image_page.set_image_name(character_1_name)
-        google_images_page = google_search_image_page.click_on_search_images_button()
+        google_images_page = google_search_image_page.click_on_search_images_button(character_1_name)
         google_images_page.click_on_image_by_character_id(character_1_id)
-        google_images_page.capture_image_from_image_details(character_1_name, character_1_id)
+        # google_images_page.capture_image_from_image_details(character_1_name, character_1_id)
 
         # character 2
         character_2 = character_details[1]

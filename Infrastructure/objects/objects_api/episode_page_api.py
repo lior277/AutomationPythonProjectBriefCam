@@ -76,6 +76,7 @@ class EpisodePageApi:
 
     async def get_selected_character_urls_async(self, episode_urls: List[str]) -> List[str]:
         selected_character_urls = []
+
         for episode_url in episode_urls:
             episode_data = await self.api_access.execute_get_request_async(episode_url)
             character_urls = episode_data.get('characters', [])
